@@ -171,6 +171,89 @@ export default function Lab1() {
             </form>
         </div>
 
+        <h5>Text Boxes</h5>
+        <label>Biography:</label><br/>
+        <textarea id="wd-textarea" cols={30} rows={10}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</textarea>
+
+        <h5 id="wd-buttons">Buttons</h5>
+        <button id="wd-all-good" onClick={() => alert("Life is Good!")} type="button">
+            Hello World!
+        </button>
+
+        <h5>File Upload</h5>
+        <input id="wd-upload" type="file"/>
+
+        <h4 id="wd-radio-buttons">Radio Buttons</h4>
+        <label>Favorite Movie Genre:</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-comedy"/>
+        <label htmlFor="wd-radio-comedy">Comedy</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-drama"/>
+        <label htmlFor="wd-radio-drama">Drama</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-scifi"/>
+        <label htmlFor="wd-radio-scifi">Science Fiction</label><br />
+
+        <input type="radio" name="radio-genre" id="wd-radio-fantasy"/>
+        <label htmlFor="wd-radio-fantasy">Fantasy</label><br />
+
+        <h5 id="wd-checkboxes">Checkboxes</h5>
+        <label>Favorite Movie Genre:</label><br />
+
+        <input type="checkbox" name="check-genre" id="wd-check-comedy"/>
+        <label htmlFor="wd-check-comedy">Comedy</label><br />
+
+        <input type="checkbox" name="check-genre" id="wd-check-drama"/>
+        <label htmlFor="wd-check-drama">Drama</label><br />
+
+        <input type="checkbox" name="check-genre" id="wd-check-scifi"/>
+        <label htmlFor="wd-check-scifi">Science Ficition</label><br />
+
+        <input type="checkbox" name="check-genre" id="wd-check-fantasy"/>
+        <label htmlFor="wd-check-fantasy">Fantasy</label>
+
+        <h3 id="wd-dropdowns">Dropdowns</h3>
+
+        <h4>Select one</h4>
+        <label htmlFor="wd-select-one-genre">Favorite Movie Genre:</label><br />
+        <select id="wd-select-one-genre">
+            <option value="COMEDY">Comedy</option>
+            <option value="DRAMA">Drama</option>
+            <option selected value="SCIFI">Science Fiction</option>
+            <option value="FANTASY">Fantasy</option>
+        </select>
+
+        <h4>Select many</h4>
+        <label htmlFor="wd-select-many">Favorite Movie Genre:</label><br />
+        <select multiple id="wd-select many">
+            <option value="COMEDY">Comedy</option>
+            <option value="DRAMA">Drama</option>
+            <option selected value="SCIFI">Science Fiction</option>
+            <option selected value="FANTASY">Fantasy</option>
+        </select>
+
+        <h3>Other HTML Field Types</h3>
+
+        <label htmlFor="wd-text-fields-email">Email:</label>
+        <input type="email" placeholder="user@somewhere.com" id="wd-text-fields-email"/><br />
+        
+        <label htmlFor="wd-text-fields-salary">Starting salary:</label>
+        <input type="number" id="wd-text-fields-salary" placeholder="1000" value="100000"/><br />
+
+        <label htmlFor="wd-text-fields-rating">Rating:</label>
+        <input type="range" id="wd-text-fields-rating" placeholder="Doe" max="5" value="4"/><br />
+
+        <label htmlFor="wd-text-fields-dob">Date of birth:</label>
+        <input type="date" id="wd-text-fields-dob" value="2000-01-21"/><br />
+
+
+        <h4>Anchor Tag</h4>
+        Please <a id="wd-lipsum" href="https://www.lipsum.com">click here</a> to get dummy text!<br />
+        Also, to access my GitHub code repository, please <a id="wd-github" href="https://github.com/Jessewcs/kanbas-react-web-app.git">click here!</a><br />
+
+
         </div>
       </div>
     );
