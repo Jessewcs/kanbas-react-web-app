@@ -5,6 +5,7 @@
     "course": "RS101",
     "dueDate": "10-01",
     "availableFrom": "09-25",
+    "availableUntil": "10-01",
     "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   },
@@ -14,6 +15,7 @@
     "course": "RS101",
     "dueDate": "10-15",
     "availableFrom": "10-05",
+    "availableUntil": "10-15",
     "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   },
@@ -23,6 +25,7 @@
     "course": "RS101",
     "dueDate": "10-15",
     "availableFrom": "10-05",
+    "availableUntil": "10-15",
     "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   },
@@ -32,6 +35,7 @@
     "course": "RS102",
     "dueDate": "10-15",
     "availableFrom": "10-05",
+    "availableUntil": "10-15",
      "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   },
@@ -41,6 +45,7 @@
     "course": "RS102",
     "dueDate": "10-15",
     "availableFrom": "10-05",
+    "availableUntil": "10-15",
     "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   },
@@ -50,6 +55,7 @@
     "course": "RS102",
     "dueDate": "10-15",
     "availableFrom": "10-05",
+    "availableUntil": "10-15",
     "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   },
@@ -68,6 +74,7 @@
     "course": "RS103",
     "dueDate": "10-15",
     "availableFrom": "10-05",
+    "availableUntil": "10-15",
     "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   },
@@ -77,6 +84,7 @@
     "course": "RS103",
     "dueDate": "10-15",
     "availableFrom": "10-05",
+    "availableUntil": "10-15",
     "points": 100,
     "description": "The assignment is available online. Submit a link to the landing page of your Web application running on Netlify. The landing page should include the following: Your full name and section, Links to each of the lab assignments, Link to the Kanbas application, Link to all relevant source code repositories. The Kanbas application should include a link to navigate back to the landing page."
   }
