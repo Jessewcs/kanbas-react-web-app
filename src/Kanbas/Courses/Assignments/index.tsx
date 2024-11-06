@@ -1,10 +1,10 @@
 import AssignmentControls from "./AssignmentControls";
-import ModuleControlButtons from "../Modules/ModuleControlButtons";
 import LessonControlButtons from "../Modules/LessonControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { TbFilePencil } from "react-icons/tb";
 import { useParams } from "react-router";
 import * as db from "../../Database";
+import AssignmentControlButtons from "./AssignmentControlButtons";
 
 export default function Assignment() {
   const { cid } = useParams();
@@ -26,7 +26,7 @@ export default function Assignment() {
           <div className="wd-title p-3 ps-2 bg-secondary text-bg-black">
             <BsGripVertical className="me-2 fs-3" />
             <strong>ASSIGNMENTS</strong>
-            <ModuleControlButtons />
+            <AssignmentControlButtons />
           </div>
           <ul className="wd-lessons list-group rounded-0">
             {filteredAssignments.map((assignment: any) => (
