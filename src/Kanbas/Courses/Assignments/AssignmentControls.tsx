@@ -1,11 +1,15 @@
 import { FaPlus } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
+import { Link, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
 import FacultyRoute from "../../Account/FacultyRoute";
-import { useNavigate, useParams } from "react-router";
 
 export default function AssignmentControls() {
   const { cid } = useParams();
-  const navigate = useNavigate();
+  const assignments = useSelector((state: RootState) => 
+    state.assignmentReducer.assignments
+  );
 
   return (
     <div id="wd-modules-controls" className="text-nowrap">
@@ -20,18 +24,16 @@ export default function AssignmentControls() {
           placeholder="Search for Assignments"
         />
       </div>
-
       <FacultyRoute>
-        <button
+        <Link
+          to={`/Kanbas/Courses/${cid}/Assignments/new`}
           id="wd-add-assignment-btn"
           className="btn btn-lg btn-danger me-1 float-end"
-          onClick={() => navigate(`/Kanbas/Courses/${cid}/Assignments/new`)}
         >
           <FaPlus className="me-2" />
           Assignment
-        </button>
+        </Link>
       </FacultyRoute>
-
       <button
         id="wd-add-group-btn"
         className="btn btn-lg btn-secondary me-1 float-end"
