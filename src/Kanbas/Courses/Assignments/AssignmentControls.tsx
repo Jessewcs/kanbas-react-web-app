@@ -15,7 +15,7 @@ export default function AssignmentControls() {
     <div id="wd-modules-controls" className="text-nowrap">
       <div className="input-group w-75 me-3 float-start" style={{ maxWidth: '500px' }}>
         <span className="input-group-text">
-          <CiSearch />
+          <CiSearch /> 
         </span>
         <input
           id="wd-search-assignment"
