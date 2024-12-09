@@ -6,9 +6,10 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store";
-import { useState } from "react";
-import { deleteAssignment } from "./reducer";
+import { useState, useEffect } from "react";
+import { setAssignments, deleteAssignment } from "./reducer";
 import DeleteAssignment from "./DeleteAssignment";
+import * as client from "./client";
 import "./styles.css";
 
 export default function Assignment() {
@@ -33,13 +34,24 @@ export default function Assignment() {
     setShowDeleteModal(true);
   };
 
-  const handleDeleteConfirm = () => {
-    if (selectedAssignment) {
+  const handleDeleteConfirm = async () => {
+    if (selectedAssignment && cid) {
+      await client.deleteAssignment(cid, selectedAssignment._id);
       dispatch(deleteAssignment(selectedAssignment._id));
+      setShowDeleteModal(false);
+      setSelectedAssignment(null);
     }
-    setShowDeleteModal(false);
-    setSelectedAssignment(null);
   };
+
+  useEffect(() => {
+    const loadAssignments = async () => {
+      if (cid) {
+        const data = await client.fetchAssignmentsForCourse(cid);
+        dispatch(setAssignments(data));
+      }
+    };
+    loadAssignments();
+  }, [cid, dispatch]);
 
   return (
     <div>

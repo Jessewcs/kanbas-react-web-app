@@ -5,7 +5,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import { FaAlignJustify } from "react-icons/fa";
-import PeopleTable from "./People/Table";
+import People from "./People";
 import FacultyRoute from "../Account/FacultyRoute";
 
 export default function Courses({ courses }: { courses: any[]; }) {
@@ -18,7 +18,7 @@ export default function Courses({ courses }: { courses: any[]; }) {
       <h2 className="text-danger">
         <FaAlignJustify className="me-4 fs-4 mb-1" />
         {course && course.name} &gt; {pathname.split("/")[4]}
-      </h2>{" "}
+      </h2>
       <hr />
       <div className="d-flex">
         <div className="d-none d-md-block">
@@ -38,7 +38,7 @@ export default function Courses({ courses }: { courses: any[]; }) {
                 </FacultyRoute>
               }
             />
-            <Route path="People" element={<PeopleTable />} />
+            <Route path="People" element={<People />} />
             <Route
               path="Assignments/new"
               element={

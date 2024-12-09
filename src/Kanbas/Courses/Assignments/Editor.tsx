@@ -1,30 +1,20 @@
 import { useParams, useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addAssignment, updateAssignment } from "./reducer";
 import { RootState } from "../../store";
-
-interface Assignment {
-  _id: string;
-  title: string;
-  course: string;
-  dueDate: string;
-  availableFrom: string;
-  availableUntil: string;
-  points: number;
-  description: string;
-}
+import { addAssignment, updateAssignment } from "./reducer";
+import * as client from "./client";
 
 export default function AssignmentEditor() {
-  const { cid, aid } = useParams();
+  const { cid, aid = "new" } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const assignments = useSelector((state: RootState) => 
     state.assignmentReducer.assignments
   );
 
-  const [assignment, setAssignment] = useState<Assignment>({
-    _id: "",
+  const [assignment, setAssignment] = useState({
+    _id: new Date().getTime().toString(),
     title: "",
     course: cid || "",
     dueDate: "",
@@ -45,21 +35,27 @@ export default function AssignmentEditor() {
     }
   }, [aid, cid, assignments]);
 
-  const handleSubmit = () => {
-    const newAssignment = {
-      ...assignment,
-      course: cid || "",
-      _id: aid === "new" ? new Date().getTime().toString() : assignment._id
-    };
-  
-    if (aid === "new") {
-      dispatch(addAssignment(newAssignment));
-    } else {
-      dispatch(updateAssignment(newAssignment));
+  const handleSubmit = async () => {
+    try {
+      if (aid === "new") {
+        const { _id, ...newAssignmentData } = assignment;
+        const newAssignment = await client.createAssignmentForCourse({
+          ...newAssignmentData,
+          course: cid
+        });
+        dispatch(addAssignment(newAssignment));
+      } else {
+        const updatedAssignment = await client.updateAssignment({
+          ...assignment,
+          course: cid
+        });
+        dispatch(updateAssignment(updatedAssignment));
+      }
+      navigate(`/Kanbas/Courses/${cid}/Assignments`);
+    } catch (error) {
+      console.error("Error saving assignment:", error);
     }
-    navigate(`/Kanbas/Courses/${cid}/Assignments`);
   };
-
   return (
     <div id="wd-assignments-editor" className="container mt-4">
       <div className="mb-3">
